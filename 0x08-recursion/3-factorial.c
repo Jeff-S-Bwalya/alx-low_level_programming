@@ -8,16 +8,11 @@
  * Return: integer value
  */
 
-unsigned long long int factorial(unsigned int )
+int factorial(int n)
 {
-	if(n <= 1)
-	{
-		return 1;
-	}
-	return n * factorial(n - 1);
-}
-int  main()
-{
-	printf("Factorial of %d is %d\n", n, factorial(5));
-	return 0;
+	if (n < 0)
+		return (-1);
+	if (n <= 1)
+		return (1);
+	return (n * factorial(n - 1));
 }
